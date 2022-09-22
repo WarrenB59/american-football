@@ -1,0 +1,91 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(190, 190, 190);
+  color: rgb(60, 60, 60);
+}
+h1 {
+  text-align: center;
+  margin: 10px 0 50px;
+}
+p {
+  font-size: 1.2rem;
+}
+
+/* Form */
+.input-container {
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+}
+form {
+  text-align: center;
+  margin: 0 auto;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  padding: 10px 10px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 1.5rem;
+  margin: 50px auto;
+
+  text-align: center;
+}
+.submit-container {
+  display: block;
+}
+input[type="submit"] {
+  margin-top: 50px;
+  padding: 20px 30px;
+  width: auto;
+  border-radius: 20px;
+  border: none;
+  background: gray;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background: darkblue;
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+}
+input[type="submit"]:active {
+  transform: scale(1.2);
+  transition: 0.2s ease-in-out;
+}
+
+/* Result*/
+.result-teams {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+.result-teamX,
+.result-teamY {
+  font-size: 1.5rem;
+}
+.result-possibilities {
+  display: flex;
+  justify-content: space-around;
+}
+.result-possibilities-teamX,
+.result-possibilities-teamY {
+  min-width: 35%;
+  min-height: 200px;
+  text-align: justify;
+  color: white;
+  border: 5px dashed black;
+  background: rgb(96, 96, 96);
+  margin: 20px;
+  padding: 10px 50px;
+}
