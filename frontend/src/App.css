@@ -87,5 +87,11 @@ input[type="submit"]:active {
   border: 5px dashed black;
   background: rgb(96, 96, 96);
   margin: 20px;
-  padding: 10px 50px;
+  padding: 10px 20px;
+}
+.result-possibilities-teamX p,
+.result-possibilities-teamY p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-bottom: 20px;
 }

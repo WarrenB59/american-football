@@ -26,143 +26,6 @@ function App() {
     }
   }
 
-  // function getResult() {
-  //   console.log(scoreX + " " + scoreY);
-  // }
-
-  function getResult() {
-    const teamX = resultX;
-    const teamY = resultY;
-
-    const pat = (teamX && teamY) % 7 == 0;
-    const fieldGoal = (teamX && teamY) % 3 == 0;
-    const touchDown = (teamX && teamY) % 6 == 0;
-
-    if (pat) {
-      console.log(pat / 7 + "  touchdown et " + pat / 7 + " PAT");
-    }
-
-    // if ((teamX - pat) % 3 == 0) {
-    //   console.log(
-    //     "Team X a potentiellement marqué " +
-    //       pat / 7 +
-    //       "  touchdown et " +
-    //       (teamX - pat) / 3 +
-    //       " fieldgoal et " +
-    //       pat / 7 +
-    //       " PAT"
-    //   );
-    // }
-    // if ((teamY - pat) % 3 == 0) {
-    //   console.log(
-    //     "Team Y a potentiellement marqué " +
-    //       pat / 7 +
-    //       "  touchdown et " +
-    //       (teamY - pat) / 3 +
-    //       " fieldgoal et " +
-    //       pat / 7 +
-    //       " PAT"
-    //   );
-    // }
-
-    // if (teamX % 6 == 0) {
-    //   console.log(
-    //     "Team X a potentiellement marqué " + teamX / 6 + " touchdown"
-    //   );
-    // }
-    // if (teamY % 6 == 0) {
-    //   console.log(
-    //     "Team Y a potentiellement marqué " + teamY / 6 + " touchdown"
-    //   );
-    // }
-
-    // if (teamX % 3 == 0) {
-    //   console.log(
-    //     "Team X a potentiellement marqué " +
-    //       teamX / 6 +
-    //       " touchdown" +
-    //       teamX / 3 +
-    //       " fieldgoal"
-    //   );
-    // }
-    // if (teamY % 3 == 0) {
-    //   console.log(
-    //     "Team Y a potentiellement marqué " +
-    //       teamY / 6 +
-    //       " touchdown" +
-    //       teamY / 3 +
-    //       " fieldgoal"
-    //   );
-    // }
-
-    // if (teamX % 7 == 0 && teamX % 3 == 0) {
-    //   if (teamX > 14) {
-    //     for (let i = 1; i <= teamX / 6; i++) {
-    //       let z = parseInt((i % 3) + 1);
-    //       if (i > 2 && (teamX - 6 * i) / 3 - 1 > 0) {
-    //         console.log(
-    //           "Team X a potentiellement marqué " +
-    //             i +
-    //             "  touchdown et " +
-    //             (teamX - 6 * i) / 3 +
-    //             " fieldgoal"
-    //         );
-    //         console.log(
-    //           "Team X a potentiellement marqué " +
-    //             i +
-    //             ((teamX - 6 * i) / 3 - 1) +
-    //             " fieldgoal et " +
-    //             z * 3 +
-    //             " PAT"
-    //         );
-    //       }
-    //       if (i < 3) {
-    //         console.log(
-    //           "Team Y a potentiellement marqué " +
-    //             i +
-    //             "  touchdown et " +
-    //             (teamX - 6 * i) / 3 +
-    //             " fieldgoal"
-    //         );
-    //       }
-    //     }
-    //   }
-    // }
-    // if (teamY % 7 == 0 && teamY % 3 == 0) {
-    //   if (teamY > 14) {
-    //     for (let i = 1; i <= teamY / 6; i++) {
-    //       let z = parseInt((i % 3) + 1);
-    //       if (i > 2 && (teamY - 6 * i) / 3 - 1 > 0) {
-    //         console.log(
-    //           "Team Y a potentiellement marqué " +
-    //             i +
-    //             "  touchdown et " +
-    //             (teamY - 6 * i) / 3 +
-    //             " fieldgoal"
-    //         );
-    //         console.log(
-    //           "Team X a potentiellement marqué " +
-    //             i +
-    //             ((teamY - 6 * i) / 3 - 1) +
-    //             " fieldgoal et " +
-    //             z * 3 +
-    //             " PAT"
-    //         );
-    //       }
-    //       if (i < 3) {
-    //         console.log(
-    //           "Team Y a potentiellement marqué " +
-    //             i +
-    //             "  touchdown et " +
-    //             (teamY - 6 * i) / 3 +
-    //             " fieldgoal"
-    //         );
-    //       }
-    //     }
-    //   }
-    // }
-  }
-
   return (
     <div className="App">
       <div className="header">
@@ -201,12 +64,6 @@ function App() {
               id="submit-button"
               type="submit"
               value="Calcul des possibilités via l'API"
-              onClick={
-                // setResultX(scoreX.valueOf());
-                // setResultY(scoreY.valueOf());
-                // getResult();
-                postScore
-              }
             />
           </form>
         </div>
@@ -222,12 +79,12 @@ function App() {
         </div>
         <div className="result-possibilities">
           <div className="result-possibilities-teamX">
-            {/* variable probabilités */}
-            <p>{resultX}</p>
+            <p>Pour le score donné, l'équipe X a potentiellement marqué</p>
+            <h4>{resultX}</h4>
           </div>
           <div className="result-possibilities-teamY">
-            {/* variable probabilités */}
-            <p>{resultY}</p>
+            <p>Pour le score donné, l'équipe Y a potentiellement marqué</p>
+            <h4>{resultY}</h4>
           </div>
         </div>
       </div>
