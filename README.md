@@ -1,16 +1,21 @@
 ## Démarrer projet
 
-## INSTALLATIONS DÉPENDANCES
-
 ## BACK-END
 
 ### `cd backend`
 
 Ouvrez votre terminal et dirigez vous dans le répertoire "backend" avec la commande : cd backend
 
+### `npm install`
+
+Une fois dans le répertoire, lancez la commande : npm install
+=> [fichier npm_install](./captures_ecran/installation_dependances/step1.png)
+Un dossier "node_modules" sera créé et toutes les dépendances nécessaires au projet seront installées
+=> [fichier npm_install](./captures_ecran/installation_dependances/step2.png)
+
 ### `npm start`
 
-Une fois dans le répertoire, lancez la commande : npm start
+Ensuite, lancez la commande : npm start
 Le serveur sera lancé sur [http://localhost:3000] sur votre navigateur
 
 ## FRONT-END
@@ -19,9 +24,14 @@ Le serveur sera lancé sur [http://localhost:3000] sur votre navigateur
 
 Ouvrez un nouveau terminal et dirigez vous dans le répertoire "frontend" avec la commande : cd frontend
 
+### `npm install`
+
+Une fois dans le répertoire, lancez la commande : npm install
+Un dossier "node_modules" sera créé et toutes les dépendances nécessaires au projet seront installées
+
 ### `npm start`
 
-Une fois dans le répertoire, lancez la commande : npm start
+Ensuite, lancez la commande : npm start
 Votre terminal vous indiquera qu'un processus est déjà lancé sur le port 3000 (le serveur backend)
 Il vous proposera donc le lancer sur le port 3001 en tapant sur : Y
 Le front sera donc lancé sur [http://localhost:3001] sur votre navigateur
