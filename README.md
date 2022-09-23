@@ -59,3 +59,26 @@ Résultat obtenu sur le serveur back
 => [fichier résultat_back](./captures_ecran/back/score_post_backend_axios.png)
 En retournant sur le terminal de commande et grâce au paquet "nodemon"
 les résultats obtenus sont rafraîchit en temps réel et visibles côté back
+
+## Dossier algoJS
+
+En alternative, vous pouvez vous rendre dans le dossier
+=> [dossier algoJS](./captures_ecran/algoJS/)
+Vous y trouverez l'algorithme travaillé sans React
+=> [fichier index.js](./algoJS/index.js)
+
+Pour ouvrir un serveur dans le but d'afficher ce petit programme alternatif
+Si vous ne possédez pas l'extension Live Server,
+veuillez la télécharger dans l'onglet "extensions de votre IDE"
+=> [image Live Server](./captures_ecran/algoJS/extension_live_server.png)
+
+Ensuite, à la racine du projet "/weekera"
+Cliquez sur le bouton Go Live (de l'extension Live Server)
+=> [image Live Server](./captures_ecran/algoJS/open_with_live_server.png)
+Ou faites un clic droit : Open With Live Server depuis le fichier HTML
+=> [fichier index.html](./algoJS/index.html)
+
+Enfin, vous pourrez tester l'algorithme où le Point After Touchdown est mieux implémenté
+=> [image algo](./captures_ecran/algoJS/touchdown_pat.png)
+Field Goal
+=> [image algo](./captures_ecran/algoJS/touchdown_fieldgoal.png)
