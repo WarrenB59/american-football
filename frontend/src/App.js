@@ -1,15 +1,21 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./App.css";
 
 function App() {
-  const [scoreX, setScoreX] = useState("");
-  const [scoreY, setScoreY] = useState("");
   const [resultX, setResultX] = useState("");
   const [resultY, setResultY] = useState("");
+  const scoreXref = useRef();
+  const scoreYref = useRef();
 
   async function postScore(e) {
     e.preventDefault();
+    const scoreX = scoreXref.current.value;
+    const scoreY = scoreYref.current.value;
+    console.log(
+      "Team X : " + scoreX + " points ",
+      "Team Y : " + scoreY + " points "
+    );
     try {
       await axios
         .post("http://localhost:3000/score", {
@@ -40,8 +46,7 @@ function App() {
                 type="number"
                 placeholder="Entrez score"
                 min={0}
-                value={scoreX}
-                onChange={(e) => setScoreX(e.target.value)}
+                ref={scoreXref}
               />
             </form>
           </div>
@@ -52,8 +57,7 @@ function App() {
                 type="number"
                 placeholder="Entrez score"
                 min={0}
-                value={scoreY}
-                onChange={(e) => setScoreY(e.target.value)}
+                ref={scoreYref}
               />
             </form>
           </div>

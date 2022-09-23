@@ -5,12 +5,6 @@ const port = 3000;
 const cors = require("cors");
 const { scoreResult } = require("./controller/scoreResult");
 
-// npm init
-// npm i express cors nodemon
-// they add a handy req.body object to our req,
-// containing a Javascript
-//  object representing the payload sent with the request
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());

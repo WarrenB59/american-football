@@ -1,11 +1,57 @@
 module.exports.scoreResult = (req, res) => {
   let { scoreX, scoreY } = req.body;
-  let resultX = scoreX * 4;
-  let resultY = scoreY * 8;
+  console.log(
+    "Score équipes => " + "Team X : " + scoreX + " points ",
+    "Team Y : " + scoreY + " points "
+  );
 
-  // function getResult() {
-  //   let resultX;
-  //   let resultY;
+  const touchDown = (scoreX && scoreY) % 6 == 0;
+  const fieldGoal = (scoreX && scoreY) % 3 == 0;
+  const pat = ((scoreX && scoreY) - touchDown) % 7 == 0;
+
+  // if (touchDown) {
+  //   console.log("Team X : " + scoreX / 6 + " Touchdown");
+  //   console.log("Team Y : " + scoreY / 6 + " Touchdown");
+  //   res.json({
+  //     scoreX: scoreX / 6 + " Touchdown",
+  //     scoreY: scoreY / 6 + " Touchdown",
+  //   });
+  // }
+  // if (fieldGoal) {
+  //   console.log("Team X : " + scoreX / 3 + " Field Goal");
+  //   console.log("Team Y : " + scoreY / 3 + " Field Goal");
+  //   res.json({
+  //     scoreX: scoreX / 3 + " Field Goal",
+  //     scoreY: scoreY / 3 + " Field Goal",
+  //   });
+  // }
+
+  if (pat) {
+    console.log(
+      "Team X : " +
+        (scoreX - (scoreX % 6)) / 6 +
+        " Touchdown et " +
+        scoreX / 7 +
+        " Point After TouchDown"
+    );
+    console.log(
+      "Team Y : " +
+        (scoreY - (scoreY % 6)) / 6 +
+        " Touchdown et " +
+        scoreY / 7 +
+        " Point After TouchDown"
+    );
+  }
+  if (touchDown || fieldGoal) {
+    console.log("Team X : " + scoreX / 6 + " Touchdown");
+    console.log("Team X : " + scoreX / 3 + " Field Goal");
+    console.log("Team Y : " + scoreY / 6 + " Touchdown");
+    console.log("Team Y : " + scoreY / 3 + " Field Goal");
+    res.json({
+      scoreX: scoreX / 6 + " Touchdown ou " + scoreX / 3 + " Field Goal",
+      scoreY: scoreY / 6 + " Touchdown ou " + scoreY / 3 + " Field Goal",
+    });
+  }
 
   //   if (scoreX % 6 == 0) {
   //     resultX = scoreX + "touchdown";
@@ -134,15 +180,14 @@ module.exports.scoreResult = (req, res) => {
   //     }
   //   }
   // }
-  // }
 
-  res.json({ scoreX: resultX, scoreY: resultY });
-  console.log(
-    "Score équipe X : " +
-      scoreX +
-      " points - " +
-      "Score équipe Y : " +
-      scoreY +
-      " points"
-  );
+  // res.json({ scoreX: resultX, scoreY: resultY });
+  // console.log(
+  //   "Score équipe X : " +
+  //     scoreX +
+  //     " points - " +
+  //     "Score équipe Y : " +
+  //     scoreY +
+  //     " points"
+  // );
 };
