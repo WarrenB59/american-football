@@ -44,6 +44,7 @@ Et les différents sous-dossiers :
 => [dossier algoJS](./captures_ecran/algoJS/)
 => [dossier back](./captures_ecran/back/)
 => [dossier front](./captures_ecran/front/)
+=> [dossier front](./captures_ecran/installation_dependances/)
 => [fichier terminaux_back+front](./captures_ecran/terminaux_back%2Bfront.png)
 
 ## Utilisation du programme
